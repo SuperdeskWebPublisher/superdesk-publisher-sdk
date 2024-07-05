@@ -22,7 +22,7 @@ interface ArticleInterface
 
     public function getTopics(): array;
 
-    public function setTopics(): array;
+    public function setTopics(?array $topics = null);  
 
     public function getTitle(): string;
 
