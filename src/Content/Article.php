@@ -37,6 +37,11 @@ class Article extends Content implements ArticleInterface
     protected $keywords = [];
 
     /**
+     * @var array
+     */
+    protected $topics = [];
+
+    /**
      * @var string
      */
     protected $title;
@@ -202,6 +207,16 @@ class Article extends Content implements ArticleInterface
     {
         $this->keywords = $keywords;
     }
+
+    public function getTopics(): array
+    {
+        return $this->topics;
+    }
+
+    public function setTopics($topics)
+    {
+        $this->topics = $topics;
+    }  
 
     public function getFields(): array
     {

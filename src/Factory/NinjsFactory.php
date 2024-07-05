@@ -147,11 +147,11 @@ class NinjsFactory implements FactoryInterface
     {
         $articleAuthors = $article->getAuthors();
         if (null === $articleAuthors) {
-            $item->setByline('editoria');
+            $item->setByline('Redakcija Revije Kolubara');
 
             return;
         }
-        $byline = [];
+        // $byline = [];
         foreach ($articleAuthors as $articleAuthor) {
             $author = new Author();
             $author->setName($articleAuthor['name']);
@@ -163,10 +163,10 @@ class NinjsFactory implements FactoryInterface
             }
 
             $author->setRole('editor');
-            $byline[] = $articleAuthor['name'];
+            // $byline[] = $articleAuthor['name'];
             $item->addAuthor($author);
         }
 
-        $item->setByline(implode(', ', $byline));
+        // $item->setByline(implode(', ', $byline));
     }
 }

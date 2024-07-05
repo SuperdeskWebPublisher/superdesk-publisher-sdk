@@ -20,6 +20,10 @@ interface ArticleInterface
 
     public function getKeywords(): array;
 
+    public function getTopics(): array;
+
+    public function setTopics(array $topics = null);
+
     public function getTitle(): string;
 
     public function getDescription(): ?string;
